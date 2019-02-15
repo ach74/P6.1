@@ -4,8 +4,8 @@
 
 .flip-card {
   background-color: transparent;
-  width: 250px;
-  height: 350px;
+  min-width: 180px;
+  height: 250px;
   perspective: 10000px; }
 
 .flip-card-inner {
