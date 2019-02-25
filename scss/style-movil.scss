@@ -1,0 +1,7 @@
+@media (max-width: 700px) {
+	body{
+		.grid-container{
+			grid-template-areas: "top top" "left left" "bottom-left bottom-left" "bottom-right bottom-right" "bottom-mid bottom-mid";
+		}
+	}
+}

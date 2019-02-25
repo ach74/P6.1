@@ -1,12 +1,23 @@
 
+$color-principal: #ebeced;
+
+@mixin transfom-img(){
+  opacity: 1;
+  transition: .4s cubic-bezier(.45,.05,.55,.95);
+}
+
+%header-background{
+  background: url("../img/fondo.jpg") no-repeat;
+  background-size: 100% 100%;
+}
 
 body{
   .bg-light {
-    background-color: #ebeced !important;
+    background-color: $color-principal !important;
   }
   .header{
-    background: url("../img/fondo.jpg") no-repeat;
-    background-size: 100% 100%;
+    
+    @extend %header-background;
     min-height: 350px;
 
     .calidadFiltro{
@@ -15,13 +26,86 @@ body{
     }
   }
 
-  footer{
-    background-color: #ebeced;
-    .select-footer{
-      list-style-type: none;
-      li:hover{
-        text-decoration: underline;
-      }
+  #panel, #panel-fade,#panel-animation{
+    display: none;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-areas: "top top top" "left left bottom-right" "bottom-left bottom-mid bottom-right";
+
+    .tokio{
+      grid-area: top;
+      background: black;
+    }
+    .nuevaYork{
+      grid-area: left;
+    }
+    .sidney{
+      grid-area: bottom-left;
+    }
+    .barcelona{
+      grid-area: bottom-mid;
+    }
+    .sanFrancisco{
+      grid-area: bottom-right;
+    }
+
+    .card img{
+     @include transfom-img();
+   }
+
+   .card:hover img{
+    opacity: .5;
+  }
+}
+
+.opinionSelect{
+  list-style-type: none;
+}
+.container-product{
+  min-height: 650px;
+}
+.opinion-bar{
+  .progress{
+    .progressbar1{
+      width: 75%;
+    }
+    .progressbar2{
+      width: 80%;
+    }
+    .progressbar3{
+      width: 82%;
+    }
+    .progressbar4{
+      width: 95%;
+    }
+    .progressbar5{
+      width: 70%;
     }
   }
 }
+#accordionExample{
+  .card:hover{
+    background: #b9b9b933;
+  }
+}
+footer{
+  background-color: $color-principal;
+  .select-footer{
+    list-style-type: none;
+    li:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.modal-body{
+  padding: 0;
+}
+
+.modal-content{
+  background-color: #3e444a;
+}
+}
+
+
+@import 'style-movil';

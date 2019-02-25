@@ -1,13 +1,62 @@
+body .header {
+  background: url("../img/fondo.jpg") no-repeat;
+  background-size: 100% 100%; }
+
 body .bg-light {
   background-color: #ebeced !important; }
 
 body .header {
-  background: url("../img/fondo.jpg") no-repeat;
-  background-size: 100% 100%;
   min-height: 350px; }
   body .header .calidadFiltro {
     width: -moz-available;
     text-align: left; }
+
+body #panel, body #panel-fade, body #panel-animation {
+  display: none; }
+
+body .grid-container {
+  display: grid;
+  grid-template-areas: "top top top" "left left bottom-right" "bottom-left bottom-mid bottom-right"; }
+  body .grid-container .tokio {
+    grid-area: top;
+    background: black; }
+  body .grid-container .nuevaYork {
+    grid-area: left; }
+  body .grid-container .sidney {
+    grid-area: bottom-left; }
+  body .grid-container .barcelona {
+    grid-area: bottom-mid; }
+  body .grid-container .sanFrancisco {
+    grid-area: bottom-right; }
+  body .grid-container .card img {
+    opacity: 1;
+    transition: 0.4s cubic-bezier(0.45, 0.05, 0.55, 0.95); }
+  body .grid-container .card:hover img {
+    opacity: .5; }
+
+body .opinionSelect {
+  list-style-type: none; }
+
+body .container-product {
+  min-height: 650px; }
+
+body .opinion-bar .progress .progressbar1 {
+  width: 75%; }
+
+body .opinion-bar .progress .progressbar2 {
+  width: 80%; }
+
+body .opinion-bar .progress .progressbar3 {
+  width: 82%; }
+
+body .opinion-bar .progress .progressbar4 {
+  width: 95%; }
+
+body .opinion-bar .progress .progressbar5 {
+  width: 70%; }
+
+body #accordionExample .card:hover {
+  background: #b9b9b933; }
 
 body footer {
   background-color: #ebeced; }
@@ -15,3 +64,13 @@ body footer {
     list-style-type: none; }
     body footer .select-footer li:hover {
       text-decoration: underline; }
+
+body .modal-body {
+  padding: 0; }
+
+body .modal-content {
+  background-color: #3e444a; }
+
+@media (max-width: 700px) {
+  body .grid-container {
+    grid-template-areas: "top top" "left left" "bottom-left bottom-left" "bottom-right bottom-right" "bottom-mid bottom-mid"; } }
