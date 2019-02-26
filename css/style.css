@@ -11,7 +11,7 @@ body .header {
     width: -moz-available;
     text-align: left; }
 
-body #panel, body #panel-fade, body #panel-animation {
+body #panel, body #panel-fade, body #panel-fade-2, body #panel-fade-3, body #panel-animation {
   display: none; }
 
 body .grid-container {

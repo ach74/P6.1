@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "node": "^11.10.0",
     "node-sass": "^4.11.0",
     "sass": "^1.17.0"
   },
@@ -13,5 +14,13 @@
     "compiler-sass": "node-sass --watch scss -o css"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ach74/P6.1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ach74/P6.1/issues"
+  },
+  "homepage": "https://github.com/ach74/P6.1#readme"
 }
